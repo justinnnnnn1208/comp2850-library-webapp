@@ -1,0 +1,158 @@
+:root {
+  --bg: #f2f2f2;
+  --panel: #fff;
+  --line: #d0d0d0;
+  --text: #222;
+  --muted: #666;
+  --accent: #4f46e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-shell {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.title-pill {
+  width: fit-content;
+  margin: 0 auto 1.25rem;
+  border: 1px solid #bbb;
+  border-radius: 12px;
+  padding: 0.75rem 2rem;
+  font-size: 1.8rem;
+  background: var(--panel);
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid #bbb;
+  padding: 2rem;
+}
+
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+input[type="text"] {
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+}
+
+.filter-row, .sort-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.75rem 0 1.25rem;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  background: #f7f7f7;
+  padding: 0.55rem 1rem;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  min-width: 160px;
+  margin-bottom: 1.5rem;
+}
+
+button.secondary {
+  min-width: 160px;
+}
+
+button.back {
+  margin-bottom: 1rem;
+}
+
+.link-btn {
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  padding: 0;
+}
+
+.quick-links ul {
+  margin-top: 0.5rem;
+}
+
+.results-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.results-list li {
+  border-bottom: 1px solid var(--line);
+  padding: 0.75rem 0;
+}
+
+.results-list li:last-child {
+  border-bottom: none;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  row-gap: 1rem;
+  margin: 0;
+}
+
+.details-grid dd,
+.details-grid dt {
+  margin: 0;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.staff-info {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.button-row {
+  display: flex;
+  gap: 1rem;
+}
