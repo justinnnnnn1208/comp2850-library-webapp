@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Library Web App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="title-pill" id="screenTitle">Home / Search Screen</header>
+
+      <section class="card view active" id="homeView">
+        <h1>Welcome to the library!</h1>
+
+        <label for="searchInput">Find a book</label>
+        <input id="searchInput" type="text" placeholder="Search by title or author" />
+
+        <div class="filter-row">
+          <span>Filter</span>
+          <label class="checkbox-label">
+            <input id="availableOnly" type="checkbox" />
+            Available only
+          </label>
+        </div>
+
+        <button id="searchBtn" class="primary">Search</button>
+
+        <section class="quick-links">
+          <h2>Quick Access</h2>
+          <ul>
+            <li><button class="link-btn" id="allBooksBtn">View all available books</button></li>
+            <li><button class="link-btn" id="browseCategoryBtn">Browse by category (Programming)</button></li>
+          </ul>
+          <button id="staffBtn" class="secondary">Go to Staff Dashboard</button>
+        </section>
+      </section>
+
+      <section class="card view" id="resultsView">
+        <button class="back" data-back="homeView">&lt; back</button>
+        <h2 id="resultsLabel">Results for:</h2>
+
+        <div class="sort-row">
+          <span>Sort by:</span>
+          <label><input type="radio" name="sort" value="relevance" checked /> Relevance</label>
+          <label><input type="radio" name="sort" value="availability" /> Availability</label>
+        </div>
+
+        <ul id="resultsList" class="results-list"></ul>
+      </section>
+
+      <section class="card view" id="detailsView">
+        <button class="back" data-back="resultsView">&lt; back</button>
+
+        <dl class="details-grid">
+          <dt>Title:</dt>
+          <dd id="detailTitle"></dd>
+
+          <dt>Author:</dt>
+          <dd id="detailAuthor"></dd>
+
+          <dt>Status:</dt>
+          <dd id="detailStatus"></dd>
+
+          <dt>Location Details:</dt>
+          <dd id="detailLocation"></dd>
+
+          <dt>Notes:</dt>
+          <dd id="detailNotes"></dd>
+        </dl>
+      </section>
+
+      <section class="card view" id="staffView">
+        <button class="back" data-back="homeView">&lt; back</button>
+
+        <h2>Search Book</h2>
+        <input id="staffSearchInput" type="text" placeholder="Enter title or ID" />
+
+        <h2>Book Information</h2>
+        <div class="staff-info">
+          <p id="staffBookInfo">Select a book from search results first.</p>
+          <p><strong>Current Status:</strong> <span id="staffStatus">N/A</span></p>
+        </div>
+
+        <h2>Update Status</h2>
+        <div class="button-row">
+          <button class="secondary" id="setAvailableBtn">Set Available</button>
+          <button class="secondary" id="setLoanBtn">Set On Loan</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
